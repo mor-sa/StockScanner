@@ -7,6 +7,14 @@ $(document).ready(function(){
     $('.ui.modal').modal('show');
   })
 
+  $("#del_stock").click(function(){
+    console.log("DELETE");
+    console.log(JSON.stringify(stock));
+    // const stock = $(stock);
+
+
+  })
+
   $("#save").click(function(){
     var symbols = $("#symbols").val();
 
@@ -70,6 +78,7 @@ $(document).ready(function(){
       <th>Dividend Yield</th>
       <th>50 Day MA</th>
       <th>200 Day MA</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
@@ -82,6 +91,7 @@ $(document).ready(function(){
       <td>{{ stock.dividend_yield }}</td>
       <td>{{ stock.ma50 }}</td>
       <td>{{ stock.ma200 }}</td>
+      <td><input type="button" id="del_stock" class="ui button" value="stock">Delete Stock</input></td>
     </tr>
     {% endfor %}
   </tbody>
