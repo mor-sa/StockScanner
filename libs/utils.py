@@ -25,7 +25,7 @@ def fetch_stock_data(id: int):
     db.add(stock)
     db.commit()
 
-def del_stock(id: int):
-    db = SessionLocal()
-    db.query(Stock).filter(Stock.id == id).delete()
-    db.commit()
+# def del_stock(id: int):
+#     db = SessionLocal()
+#     db.query(Stock).filter(Stock.id == id).delete()
+#     db.commit()

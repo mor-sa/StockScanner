@@ -78,13 +78,13 @@ async def create_stock(stock_request: libs.utils.StockRequest, background_tasks:
         "message": "stock added to database"
     }
 
-async def delete_stock(stock_request: libs.utils.StockRequest, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
-    stock = Stock()
-    stock.symbol = stock_request.symbol
-
-    background_tasks.add_task(libs.del_stock, stock.id)
-
-    return {
-        "code": "success",
-        "message": "stock deleted from database"
-    }
+# async def delete_stock(stock_request: libs.utils.StockRequest, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
+#     stock = Stock()
+#     stock.symbol = stock_request.symbol
+#
+#     background_tasks.add_task(libs.del_stock, stock.id)
+#
+#     return {
+#         "code": "success",
+#         "message": "stock deleted from database"
+#     }
